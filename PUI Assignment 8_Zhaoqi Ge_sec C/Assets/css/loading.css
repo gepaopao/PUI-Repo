@@ -1,0 +1,91 @@
+/* background image, using repetitive image as pattern */
+body{
+    background-image: url("../images/background-01.png");
+    background-repeat: repeat;
+	font-family:verdana;
+	padding:5px;
+}
+
+/* icon line group 0 and 1 */
+.st0{
+	fill:#CDE9EF;
+	stroke:#CDE9EF;
+	stroke-width:3;
+	stroke-miterlimit:10;
+}
+.st1{
+	fill:none;
+	stroke:#CDE9EF;
+	stroke-width:10;
+	stroke-miterlimit:10;
+}
+
+/* overall wrapper style (inclusive) */
+.wrapper {
+	position: absolute;
+	top:35%;
+	left:32%;
+	tranform: translate(-50%.-50%);
+	width:30%;
+}
+
+/* span content style */
+#span1 {
+	color:#CDE9EF;
+	text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+/* path */
+path {
+	stroke:#CDE9EF;
+	fill:#CDE9EF;
+	stroke-dasharray: 700;
+	opacity: 10;
+	animation: animate 8s cubic-bezier(.52,.24,.5,.76);
+}
+
+/* SVG animation related style */
+@keyframes animate {
+	0% {
+		opacity: 0;
+		fill:none;
+		stroke-dashoffset:760;
+	}
+
+	30% {
+		opacity: 10;
+		fill:none;
+		stroke-dashoffset:760;
+	}
+
+	90% {
+		fill: rgba(205,233,239,0);
+	}
+
+	100% {
+		opacity: 10;
+		fill: rgba (205,233,239,1);
+		stroke-dashoffset:0;
+	}
+}
+
+/* adjust to one-column on smaller screens*/
+/* now setting 799px as the threshold of switching*/
+@media screen and (max-width: 799px){
+	.wrapper {
+		top:15%;
+		left:5%;
+		tranform: translate(-50%.-50%);
+		width:90%;
+
+	}
+
+	#span1 {
+		color:#CDE9EF;
+		text-align: center;
+   		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    	font-size: 20px;
+	}
+}

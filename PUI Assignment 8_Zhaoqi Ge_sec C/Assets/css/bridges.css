@@ -1,0 +1,187 @@
+/* overall style for html page */
+*{
+	border:0px; 
+	margin:0px; 
+	padding:0px; 
+	box-sizing:border-box;
+}
+
+/* overall wrapper style (inclusive) */
+#wrapper{
+	width:95%;
+	margin:0px auto;
+	max-width: 1440px;
+	min-height:600px;
+}
+
+/* background image, using repetitive image as pattern */
+body{
+	background-image: url("../images/background-01.png");
+	background-repeat: repeat;
+	font-family:verdana;
+	padding:5px;
+}
+
+/* href style to remove text underline */
+a{
+	text-decoration: none;
+}
+
+/* style of bridge title part (preserved for future use) */
+#bridge_title{
+	margin-top:5%;
+	text-align: center;
+    color:#D3E0E2;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:26px;
+}
+
+/* header style */
+header {
+	min-height: 20px;
+}
+
+/* navigation section overall ul style */
+nav ul{
+	list-style-type:none;
+}
+
+/* navigation section li in ul style */
+nav li {
+	width:120px; height:30px; margin:12px auto;
+}
+
+/* navigation section button style */
+nav button {
+	display:block;
+	width:120px; height:35x;
+	margin:0px auto;
+	border:2px solid #2E3534;
+	border-radius: 15%;
+	line-height:30px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12pt;
+	text-align:center;
+	color:#9FB7B3;
+	text-decoration: none;
+	background-color: #434C4B;
+}
+
+/* navigation section button style : hover */
+nav button:hover {
+	background-color:#D4DDDB;
+	color:#2E3534;
+	font-weight:bold;
+	font-size: 16pt;
+}
+
+/* back button style */
+#backbutton {
+	background-color: #808988;
+	color:#D0E2DE;
+	font-weight:bold;
+}
+
+/* back button style : hover */
+#backbutton:hover {
+	background-color:#EAB763;
+	color:#2E3534;
+	font-weight:bold;
+	font-size: 14pt;
+}
+
+/* restart button style */
+#restartbutton {
+	background-color: #687271;
+	color:#D0E2DE;
+}
+
+/* restart button style : hover */
+#restartbutton:hover {
+	background-color:#DBA04B;
+	color:#2E3534;
+	font-weight:bold;
+	font-size: 14pt;
+}
+
+/* collage button style */
+#collagebutton {
+	background-color: #555E5D;
+	color:#D0E2DE;
+}
+
+/* collage button style : hover */
+#collagebutton:hover {
+	font-size: 14pt;
+	background-color:#D69941;
+	color:#2E3534;
+	font-weight:bold;
+}
+
+/* main pic framing */
+#mainpic {
+	width:72%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border-radius: 3%;
+	border: 2px solid white;
+}
+
+/* side bar framing */
+#sidebar{
+	width:200px;
+	float:left;
+	min-height:500px;
+}
+
+/* main content framing */
+#maincontent{
+	min-height:500px;
+}
+
+/* adjust to one-column on smaller screens*/
+/* now setting 799px as the threshold of switching*/
+@media screen and (max-width: 799px){
+	header {
+		min-height: 5px;
+	}
+
+	#sidebar{
+		width:100%;
+		float:none;
+		min-height: 100px;
+		overflow:hidden;
+	}
+
+	#maincontent{
+		min-height: 500px;
+	}
+
+	nav li{
+		width:33%;
+		float:left;
+	}
+
+	nav button {
+		width:80%;
+		margin: 0px auto;
+	}
+
+	#mainpic {
+		width:90%;
+		margin-top: 5%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		border-radius: 8%;
+		border: 1px solid white;
+	}
+
+	#bridge_title{
+		margin-top:15%;
+		text-align: center;
+    	color:#D3E0E2;
+    	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    	font-size:20px;
+	}
